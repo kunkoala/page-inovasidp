@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  let links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Products", path: "/products" },
+    { name: "Contact", path: "/contact" },
+  ];
   return (
-    <div>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-    </div>
+    <nav className={styles.nav}>
+      <h1>Inovasi Data Pratama</h1>
+      <ul>
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link className={styles.navText} to={link.path}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 export default Navbar;

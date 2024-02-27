@@ -1,5 +1,7 @@
 import React from "react";
 
-export const About: React.FC = () => {
+type Props = {};
+
+export const About = (props: Props) => {
   return <div>About</div>;
 };
