@@ -20,6 +20,7 @@ export const ProductOverview: React.FC<Props> = ({ products }) => {
             key={index}
             title={product.title}
             description={product.description}
+            img={"https://via.placeholder.com/150"}
           />
         ))}
       </div>

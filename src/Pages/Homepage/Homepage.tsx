@@ -41,12 +41,20 @@ export const Homepage: React.FC = () => {
 
   return (
     <div className={styles.homeContainer}>
-      <h1>Inovasi Data Pratama</h1>
-      <p>Empower Your Business with Comprehensive IT Solutions</p>
-      <button>Contact Us</button>
-      <ProductOverview products={products_1} />
-      <h2>Wakakakawaw</h2>
-      <ProductOverview products={products_2} />
+      <div className={styles.homeActionBox}>
+        <div className={styles.homeActionContent}>
+          <h1>Inovasi Data Pratama</h1>
+          <p>Empower Your Business with Comprehensive IT Solutions</p>
+          <div>
+            <button>Contact Us</button>
+          </div>
+        </div>
+      </div>
+      <div className={styles.productContainer}>
+        <ProductOverview products={products_1} />
+        <h2>Wakakakawaw</h2>
+        <ProductOverview products={products_2} />
+      </div>
     </div>
   );
 };

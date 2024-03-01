@@ -3,11 +3,25 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: space-between; 
   margin: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: all 0.3s ease;
+  border-radius: 20px;
   color: black;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  padding: 1rem;
+  min-height: 300px;
+}
+
+.cardTitle {
+  min-height: 150px;
 }

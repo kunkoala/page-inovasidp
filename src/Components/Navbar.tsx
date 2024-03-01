@@ -10,16 +10,18 @@ const Navbar = () => {
   ];
   return (
     <nav className={styles.nav}>
-      <h1>Inovasi Data Pratama</h1>
-      <ul>
-        {links.map((link, index) => (
-          <li key={index}>
-            <Link className={styles.navText} to={link.path}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.container}>
+        <h1>Inovasi Data Pratama</h1>
+        <ul>
+          {links.map((link, index) => (
+            <li key={index}>
+              <Link className={styles.navText} to={link.path}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
