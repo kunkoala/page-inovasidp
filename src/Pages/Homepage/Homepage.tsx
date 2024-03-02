@@ -52,7 +52,7 @@ export const Homepage: React.FC = () => {
       </div>
       <div className={styles.productContainer}>
         <ProductOverview products={products_1} />
-        <h2>Wakakakawaw</h2>
+        <h2>Why Us</h2>
         <ProductOverview products={products_2} />
       </div>
     </div>

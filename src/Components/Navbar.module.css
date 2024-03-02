@@ -1,6 +1,5 @@
-.nav .container {
+.nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -8,6 +7,14 @@
     z-index: 1000;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
 .nav ul {
     display: flex;
     list-style: none;
