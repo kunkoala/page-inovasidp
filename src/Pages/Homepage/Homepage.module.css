@@ -3,33 +3,69 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
   box-sizing: border-box;
-  height: 100%;
   width: 100%;
+  padding: 0;
 }
 
 .homeActionBox {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
-  max-width: 1200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: brown;
-  color: white;
-  border-radius: 20px;
+  color: rgb(54, 54, 54);
+  gap: 2rem;
   padding: 30px;
-  min-height: 50vh;
+  max-width: 80%;
+  min-height: 85vh;
+}
+
+.homeActionBox img {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .homeActionContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  max-width: 50%;
   padding: 1rem;
   min-height: 50vh;
+}
+
+.homeActionContent h1 {
+  font-size: 3.3rem;
+}
+
+.homeActionContent p {
+  color: rgb(134, 134, 134);
+  font-size: 1.2rem;
+}
+
+.ctaContainer {
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: fit-content;
+  margin-top: 50px;
+  margin-right: auto;
+}
+
+.cta {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-decoration-color: #1784f900;
+  color: #1786f9;
+  cursor: pointer;
+  height: 100%;
+
+  transition: text-decoration-color 0.2s ease;
+}
+
+.cta:hover {
+  transition: text-decoration-color 0.3s ease;
+  text-decoration-color: #1786f9;
 }
 
 .productContainer {
@@ -37,7 +73,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(241, 255, 250);
   box-sizing: border-box;
   height: 100%;
   width: 100%;

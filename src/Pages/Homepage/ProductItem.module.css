@@ -1,0 +1,6 @@
+.productItem {
+  flex: 1;
+  min-width: 300px; /* Adjust based on your design */
+  /* Optional: max-width to control number of items per row */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}

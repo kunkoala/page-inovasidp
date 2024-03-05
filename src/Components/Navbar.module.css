@@ -1,31 +1,110 @@
 .nav {
-    display: flex;
-    align-items: center;
-    padding: 1rem 3rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
+.companyLogo img {
+  width: 50%;
+  min-width: 250px;
 }
 .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
 .nav ul li {
-    margin-right: 1rem;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
 }
 
-.navText {
-    text-decoration: none;
-    color: black;
+.navText,
+.navTextActive {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.navText:hover,
+.navTextActive:hover {
+  color: #1784f9;
+  border-bottom: 2px solid #1784f9;
+}
+
+.navTextActive {
+  color: #007bff; /* Active link color */
+  border-bottom: 2px solid #007bff; /* Active link indicator */
+}
+
+.menu {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+.menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.menu:hover span {
+  background-color: #1784f9;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .companyLogo img {
+    width: 50%;
+    min-width: 100px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .nav ul.open {
+    display: flex;
+    position: absolute; /* or 'fixed' depending on your layout */
+    left: 0;
+    top: 0;
+    height: 100%; /* Full height */
+    width: 250px; /* Sidebar width */
+    background-color: #fff; /* Or any color */
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu {
+    display: flex;
+  }
 }

@@ -1,5 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
+
+import companyImage from "../../Assets/front-logo.png";
+import softwareImage from "../../Assets/software_solutions.jpg";
+import consultingStockImage from "../../Assets/consulting_stock.jpg";
+import telecommunicationsImage from "../../Assets/telecommunications_stock.jpg";
+
 import { ProductOverview } from "./ProductOverview";
 
 export const Homepage: React.FC = () => {
@@ -8,53 +15,45 @@ export const Homepage: React.FC = () => {
       title: "IT and Software Solutions",
       description:
         "Offering tailor-made software and IT solutions designed to meet your specific business needs, enhancing operational efficiency and productivity.",
-    },
-    {
-      title: "Custom Software Development",
-      description:
-        "Specialized in developing unique software solutions that solve specific problems, improve processes, and drive innovation.",
-    },
-    {
-      title: "Computer and Telecommunications Equipment Wholesale",
-      description:
-        "A wide range of high-quality computer, electronic, and telecommunications equipment to support your business infrastructure.",
-    },
-  ];
-
-  const products_2 = [
-    {
-      title: "Telecommunications Services",
-      description:
-        "Providing both wired and wireless telecommunications solutions to ensure your business stays connected with cutting-edge technology",
+      img: softwareImage,
     },
     {
       title: "Management Consulting",
       description:
-        "Expert advice to navigate complex business challenges, offering strategies for growth, optimization, and innovation.",
+        "Specialized in developing unique software solutions that solve specific problems, improve processes, and drive innovation.",
+      img: consultingStockImage,
     },
     {
-      title: "Digital Platform Development",
+      title: "Telecommunications Equipment Wholesale",
       description:
-        "Custom web portals and digital platforms designed to enhance your online presence and engage with your audience effectively.",
+        "A wide range of high-quality computer, electronic, and telecommunications equipment to support your business infrastructure.",
+      img: telecommunicationsImage,
     },
   ];
 
   return (
-    <div className={styles.homeContainer}>
-      <div className={styles.homeActionBox}>
-        <div className={styles.homeActionContent}>
-          <h1>Inovasi Data Pratama</h1>
-          <p>Empower Your Business with Comprehensive IT Solutions</p>
-          <div>
-            <button>Contact Us</button>
+    <>
+      <div className={styles.homeContainer}>
+        <div className={styles.homeActionBox}>
+          <div className={styles.homeActionContent}>
+            <h1>Empower Your Business with Comprehensive IT Solutions</h1>
+            <p>
+              We offer a wide range of IT and software solutions to help your
+              business grow and thrive in the digital age.
+            </p>
+            <div className={styles.ctaContainer}>
+              <Link to="/about" className={styles.cta}>
+                Learn more about us
+              </Link>
+            </div>
+          </div>
+          <div className={styles.homeActionContent}>
+            <img src={companyImage} alt="company-logo" />
           </div>
         </div>
-      </div>
-      <div className={styles.productContainer}>
+
         <ProductOverview products={products_1} />
-        <h2>Why Us</h2>
-        <ProductOverview products={products_2} />
       </div>
-    </div>
+    </>
   );
 };
